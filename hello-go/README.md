@@ -6,11 +6,13 @@ This is a beginner-friendly Go project that prints "Hello, VS Code!" to the term
 
 ## 📦 Project Structure
 
+```
 HELLO-GO/
-├── main.go # Main application file
-├── main_test.go # Unit test file for SayHello function
-└── go.mod # Go module definition
-|__ README.md
+├── main.go          # Main application file
+├── main_test.go     # Unit test file for SayHello function
+├── go.mod           # Go module definition
+└── README.md        # Project documentation
+```
 
 ---
 
@@ -30,80 +32,91 @@ HELLO-GO/
    ```bash
    git clone https://github.com/your-username/GenAI-project.git
    cd GenAI-project
+   ```
 
-2. **Initialize a Go module** (if not already initialized)
+2. **Initialize a Go module** (if not already initialized):
 
    ```bash
    go mod init genai-project
+   ```
 
-3. **Run the program**
+3. **Run the program**:
 
    ```bash
    go run main.go
+   ```
 
    You should see:
 
-   ```css
+   ```
    Hello, VS Code!
+   ```
 
 ---
 
 ## 🧪 Running Tests
 
-This project includes a unit test for the SayHello() function.
+This project includes a unit test for the `SayHello()` function.
 
-   bash
-   go test
+```bash
+go test
+```
 
 You should see output like:
 
-   PASS
-   ok      genai-project    0.002s
+```
+PASS
+ok      genai-project    0.002s
+```
 
 ---
 
 ## 🧠 How It Works
 
-✅ main.go
+### ✅ main.go
 
-   package main
+```go
+package main
 
-   import "fmt"
+import "fmt"
 
-   // SayHello returns a simple greeting message
-   func SayHello() string {
-       return "Hello, VS Code!"
-   }
+func SayHello() string {
+    return "Hello, VS Code!"
+}
 
-   func main() {
-       fmt.Println(SayHello())
-   }
+func main() {
+    fmt.Println(SayHello())
+}
+```
 
-- The SayHello function returns a string and is tested in main_test.go.
-- main() calls the function and prints its return value.
+- The `SayHello` function returns a string and is tested in `main_test.go`.
+- `main()` calls the function and prints its return value.
 
+### ✅ main_test.go
 
-✅ main_test.go
-   package main
+```go
+package main
 
-   import "testing"
+import "testing"
 
-   func TestSayHello(t *testing.T) {
-       got := SayHello()
-       want := "Hello, VS Code!"
+func TestSayHello(t *testing.T) {
+    got := SayHello()
+    want := "Hello, VS Code!"
 
-       if got != want {
-           t.Errorf("SayHello() = %q, want %q", got, want)
-       }
-   }
+    if got != want {
+        t.Errorf("SayHello() = %q, want %q", got, want)
+    }
+}
+```
 
-- This test checks whether the SayHello() function returns the expected greeting.
-- If the result doesn't match, the test will fail with a descriptive message.   
+- This test checks whether the `SayHello()` function returns the expected greeting.
+- If the result doesn't match, the test will fail with a descriptive message.
 
 ---
 
-## 📚 What You’ll Learn
-By working through this project, you’ll learn:
+## 📚 What You'll Learn
+
+By working through this project, you'll learn:
 - How to write and run a basic Go program
 - How to use Go modules (go mod)
 - How to write unit tests in Go
@@ -111,14 +124,9 @@ By working through this project, you’ll learn:
 - How to use VS Code effectively for Go development
 
 ---
-## MIT License
+
+## 📄 License
+
+MIT License
 
 Copyright (c) 2025 Marilyn Nduku
- 
-
-
-
-
-
-
-
